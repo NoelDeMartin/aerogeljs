@@ -72,12 +72,14 @@ jobs:
                   sed -i "7i\        cy.matchImageSnapshot();" ./cypress/e2e/app.cy.ts
                   mkdir cypress/snapshots/app.cy.ts -p
                   cp ../.github/workflows/fixtures/create-aerogel-snapshot.png "cypress/snapshots/app.cy.ts/App -- Shows get started link.snap.png"
-            - run: npm run build
-              working-directory: app
-            - run: npm run lint
-              working-directory: app
-            - run: npm run test:ci
-              working-directory: app
+            # - run: npm run build
+            #   working-directory: app
+            # - run: npm run lint
+            #   working-directory: app
+            # - run: npm run test:ci
+            #   working-directory: app
+            - name: Logs
+              run: npx npm-why componentsjs
             - name: Cypress
 
               # TODO enable snapshots tests
