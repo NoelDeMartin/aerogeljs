@@ -27,7 +27,7 @@ export class Solid extends Plugin {
     protected async installNpmDependencies(): Promise<void> {
         await Shell.run('npm install soukai-solid@next --save-exact');
         await Shell.run('npm install @noeldemartin/solid-utils@next --save-exact');
-        await Shell.run('npm install @solid/community-server@7.1.3 --save-dev -E');
+        await Shell.run('npm install @solid/community-server@~7.0 --save-dev');
         await super.installNpmDependencies();
     }
 
@@ -61,7 +61,7 @@ export class Solid extends Plugin {
                 .replace(
                     '"test:serve-app": "vite --port 5001 --mode testing"',
                     '"test:serve-app": "vite --port 5001 --mode testing",\n' +
-                        '"test:serve-pod": "community-solid-server -l warn"',
+                        '"test:serve-pod": "community-solid-server -l debug"',
                 ),
         );
 
