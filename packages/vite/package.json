@@ -36,7 +36,7 @@
         "vite": "*"
     },
     "dependencies": {
-        "@noeldemartin/utils": "0.6.0-next.e8cb401c9932651e91074fcf9da144fb5efd80cf",
+        "@noeldemartin/utils": "0.5.1-next.8877300615e6d56d7b5dfe508524589287835f23",
         "@vitejs/plugin-vue": "^4.1.0",
         "mustache": "^4.2.0",
         "rollup": "^3.29.4",

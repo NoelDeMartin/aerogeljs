@@ -23,7 +23,7 @@
         "@aerogel/plugin-solid": "*",
         "@aerogel/plugin-soukai": "*",
         "@noeldemartin/solid-utils": "0.4.0-next.bf5431cf569638e6dbc4cfd22c73be975e28f0a8",
-        "@noeldemartin/utils": "0.6.0-next.e8cb401c9932651e91074fcf9da144fb5efd80cf",
+        "@noeldemartin/utils": "0.5.1-next.8877300615e6d56d7b5dfe508524589287835f23",
         "@tailwindcss/forms": "^0.5.3",
         "@tailwindcss/typography": "^0.5.9",
         "soukai": "0.5.2-next.8da33ba6f17b4fdf885c4a88ad6284bb35f04580",
