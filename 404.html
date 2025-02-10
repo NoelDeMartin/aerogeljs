@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aerogel Playground</title>
+        <script>
+            (function () {
+                const basePath = '/playground/';
+                const url = new URL(location.href);
+
+                if (!url.pathname.startsWith(basePath)) {
+                    const link = document.createElement('link');
+
+                    link.rel = 'stylesheet';
+                    link.href = 'https://cdn.simplecss.org/simple.min.css';
+
+                    document.head.appendChild(link);
+
+                    return;
+                }
+
+                const queryParameters = {};
+
+                url.searchParams.forEach((value, key) => (queryParameters[key] = value));
+
+                localStorage.setItem(
+                    'static-404-redirect',
+                    JSON.stringify({
+                        path: url.pathname.substring(basePath.length - 1),
+                        hash: url.hash,
+                        query: queryParameters,
+                    })
+                );
+
+                location.href = basePath;
+            })();
+        </script>
+
+        <style>
+            body {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>404 | Page not found</h1>
+        <a href="/">go home</a>
+    </body>
+</html>
